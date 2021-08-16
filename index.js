@@ -159,7 +159,9 @@ export default function remarkGitContributors(options = {}) {
             email.endsWith('@greenkeeper.io') ||
             name === 'Greenkeeper' ||
             metadata.github === 'greenkeeper[bot]' ||
-            metadata.github === 'greenkeeperio-bot'
+            metadata.github === 'greenkeeperio-bot' ||
+            email.endsWith('@renovateapp.com') ||
+            metadata.github === 'renovate[bot]'
           ) {
             continue
           }
